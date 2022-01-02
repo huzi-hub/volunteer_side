@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:volunteer_side/DeliveredDonations.dart';
 import 'package:volunteer_side/assigned_donations.dart';
 
 class Voluntter_Home extends StatefulWidget {
@@ -108,7 +109,7 @@ class _Voluntter_HomeState extends State<Voluntter_Home> {
                                           ),
                                           InkWell(
                                             child: Text(
-                                              'Donation Record',
+                                              'Assigned Donations',
                                               style: TextStyle(
                                                   fontWeight: FontWeight.bold),
                                             ),
@@ -132,66 +133,6 @@ class _Voluntter_HomeState extends State<Voluntter_Home> {
                         ],
                       ),
                     ),
-                    //food doation
-                    // Container(
-                    //   height: 150,
-                    //   width: double.infinity,
-                    //   child: Column(
-                    //     children: [
-                    //       Card(
-                    //         color: Colors.white,
-                    //         margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                    //         shape: RoundedRectangleBorder(
-                    //           borderRadius: BorderRadius.circular(20),
-                    //         ),
-                    //         // child: Container(
-                    //         //   height: 130,
-                    //         //   width: 280,
-                    //         //   child: Column(
-                    //         //     mainAxisAlignment: MainAxisAlignment.center,
-                    //         //     children: [
-                    //         //       Container(
-                    //         //         padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
-                    //         //         height: 120,
-                    //         //         color: Colors.white,
-                    //         //         width: 240,
-                    //         //         child: Column(
-                    //         //           mainAxisAlignment:
-                    //         //               MainAxisAlignment.spaceBetween,
-                    //         //           children: [
-                    //         //             Container(
-                    //         //               height: 90,
-                    //         //               decoration: BoxDecoration(
-                    //         //                   image: DecorationImage(
-                    //         //                       fit: BoxFit.cover,
-                    //         //                       image: AssetImage(
-                    //         //                         'assets/pic3.jpg',
-                    //         //                       ))),
-                    //         //             ),
-                    //         //             InkWell(
-                    //         //               child: Text(
-                    //         //                 'NGOs Record',
-                    //         //                 style: TextStyle(
-                    //         //                     fontWeight: FontWeight.bold),
-                    //         //               ),
-                    //         //               onTap: () {
-                    //         //                 Navigator.push(
-                    //         //                     context,
-                    //         //                     MaterialPageRoute(
-                    //         //                         builder: (context) =>
-                    //         //                             NGORecords()));
-                    //         //               },
-                    //         //             )
-                    //         //           ],
-                    //         //         ),
-                    //         //       )
-                    //         //     ],
-                    //         //   ),
-                    //         // ),
-                    //       )
-                    //     ],
-                    //   ),
-                    // ),
                     Column(
                       children: [
                         Card(
@@ -209,9 +150,6 @@ class _Voluntter_HomeState extends State<Voluntter_Home> {
                                 Container(
                                   padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
                                   height: 120,
-
-                                  //color if needed
-
                                   width: 240,
                                   child: Column(
                                     mainAxisAlignment:
@@ -228,16 +166,17 @@ class _Voluntter_HomeState extends State<Voluntter_Home> {
                                       ),
                                       InkWell(
                                         child: Text(
-                                          'NGO Registration',
+                                          'Delivered Donations',
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold),
                                         ),
                                         onTap: () {
-                                          // Navigator.push(
-                                          //     context,
-                                          //     MaterialPageRoute(
-                                          //         builder: (context) =>
-                                          //             NGO_Reg()));
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      DeliveredDonation(
+                                                          widget.volunteerId)));
                                         },
                                       )
                                     ],
@@ -248,7 +187,7 @@ class _Voluntter_HomeState extends State<Voluntter_Home> {
                           ),
                         )
                       ],
-                    ), //book Donation
+                    ),
                   ],
                 ),
               ),
