@@ -86,12 +86,6 @@ class _DonartionHistoryState extends State<DeliveredDonation> {
                                           fontSize: 20,
                                           color: Colors.white),
                                     ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      child: ElevatedButton(
-                                          onPressed: () {},
-                                          child: Text('Get Donation')),
-                                    )
                                   ],
                                 ),
                               ),
